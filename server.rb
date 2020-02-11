@@ -1,12 +1,7 @@
 require 'sinatra'
-require 'sinatra/contrib'
-require 'sinatra/reloader'
+require 'require_all'
 
-get '/' do
-  'Version 1.2'
-end
+require_all 'config'
+require_all 'app/services'
 
 
-get '/cars' do
-  'This is my car lists'
-end
